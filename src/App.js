@@ -1,28 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './pages/home/home';
+import Error from './pages/error/error';
 import { DataProvider } from './GlobalState';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <DataProvider>
-
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-        </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-        </a>
-        </header>
-      </div>
-    </DataProvider>
+    <BrowserRouter>
+      <DataProvider>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <Home
+              />
+            )}
+          />
+          <Error />
+        </Switch>
+      </DataProvider>
+    </BrowserRouter>
   );
 }
 

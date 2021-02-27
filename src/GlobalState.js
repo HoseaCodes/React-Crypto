@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
-import CoinMarketAPI from './API/coinMarket';
-import KeyAPI from './API/key';
+import CoinMarketAPI from './api/coinMarket';
+import KeyAPI from './api/key';
 
 export const GlobalState = createContext()
 
