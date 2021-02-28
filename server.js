@@ -1,11 +1,13 @@
 require('dotenv').config()
 const express = require('express');
+const favicon = require('serve-favicon');
 const cors = require('cors');
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
+app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
 //Routes
