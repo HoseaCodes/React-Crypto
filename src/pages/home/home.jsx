@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CryptoChart from "../../components/cryptoChart";
+import CryptoTable from "../../components/cryptoData";
 import CryptoPrices from '../../components/cryptoScroll';
 import NavBar from '../../components/navBar';
 
@@ -9,7 +9,7 @@ const Home = () => {
         <React.Fragment>
             <NavBar />
             <CryptoPrices />
-            <CryptoChart />
+            <CryptoTable />
             <Link to='/'>Go Back Home</Link>
         </React.Fragment>
     )

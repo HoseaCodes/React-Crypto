@@ -9,7 +9,7 @@ function CoinMarketAPI() {
         const params = {
             qs: {
                 'start': '1',
-                'limit': '3',
+                'limit': '5000',
                 'convert': 'USD'
             },
             headers: {

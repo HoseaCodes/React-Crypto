@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext } from 'react';
 import CoinMarketAPI from './api/coinMarket';
 import KeyAPI from './api/key';
 

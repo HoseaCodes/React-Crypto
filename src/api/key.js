@@ -15,7 +15,7 @@ function KeyAPI() {
 
         }
         const res = await axios.get(url, params)
-        console.log(res.data)
+        setKey(res.data.data)
     }
     useEffect(() => {
         getKey()
