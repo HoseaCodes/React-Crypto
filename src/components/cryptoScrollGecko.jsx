@@ -7,11 +7,11 @@ const GetPrices = () => {
     const state = useContext(GlobalState)
     const cryptos = state.coinMarketAPI.crypto[0]
     const [allTicker, setTicker] = useState('')
-    var tickers = [];
-    const formatter = new Intl.NumberFormat('en-US', {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-    });
+    // var tickers = [];
+    var tickers = React.useMemo(() => new Array(), [])
+
+    const formatter = React.useMemo(() => new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }), [])
+
 
     const getTiickers = useCallback(() => {
         cryptos.forEach(function (crypto) {
