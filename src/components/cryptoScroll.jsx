@@ -27,7 +27,7 @@ const GetPrices = () => {
         setTicker(tickers);
         // }, 10000)
         // return () => clearInterval(timer)
-    }, [tickers, cryptos]);
+    }, []);
 
     return allTicker ? (
         <p style={{ whiteSpace: 'nowrap' }}>{allTicker.join(" ")}</p>
