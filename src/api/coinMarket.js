@@ -5,7 +5,7 @@ function CoinMarketAPI() {
     const [crypto, setCrypto] = useState([])
 
     const getCrypto = async () => {
-        const url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
+        const url = "v1/cryptocurrency/listings/latest"
         const params = {
             qs: {
                 'start': '1',
