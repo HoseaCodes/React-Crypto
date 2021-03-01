@@ -20,7 +20,6 @@ const GetPrices = () => {
 
         cryptos.forEach(function (crypto) {
             tickers.push(crypto.symbol)
-            const price = Math.round(crypto.quote.USD.price * 100) / 100
             tickers.push("$" + formatter.format(Math.round(crypto.quote.USD.price * 100) / 100))
             tickers.push(" | ")
         });

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button, Form, Navbar, Nav, FormControl, NavDropdown } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import Logo from '../images/cryptologo.png'
-import Keys from './keyCount';
+// import Keys from './keyCount';
 import './style.css';
 
 export default function NavBar() {
