@@ -19,8 +19,13 @@ function CoinMarketAPI() {
             gzip: true
 
         }
-        const res = await axios.get(url, params)
-        setCrypto(res.data.data)
+        try {
+            const res = await axios.get(url, params)
+            setCrypto(res.data.data)
+            console.log(res);
+        } catch (error) {
+            console.error(error);
+        }
     }
     useEffect(() => {
         getCrypto()
