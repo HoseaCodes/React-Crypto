@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Container, Table } from 'react-bootstrap';
 import { GlobalState } from '../GlobalState';
 
-const CryptoTable = () => {
+const NewCryptoTable = () => {
     const state = useContext(GlobalState)
     const cryptos = state.coinMarketAPI.crypto[0]
     const formatter = new Intl.NumberFormat('en-US', {
@@ -20,7 +20,6 @@ const CryptoTable = () => {
                         <th>Name</th>
                         <th>Price</th>
                         <th>24 Hour Change</th>
-                        <th>7 Day Change</th>
                         <th>Market Cap</th>
                         <th>Volume</th>
                     </tr>
@@ -29,13 +28,12 @@ const CryptoTable = () => {
                     {cryptos.map(crypto => {
                         return (<>
                             <tr>
-                                <td>{crypto.cmc_rank}</td>
-                                <td>{crypto.symbol} {crypto.name} </td>
-                                <td style={{ width: '12%' }}>$ {formatter.format(Math.round(crypto.quote.USD.price * 100) / 100)}</td>
-                                <td style={{ color: Math.sign(crypto.quote.USD.percent_change_24h) === -1 ? "red" : "green" }} id="dayChange">{formatter.format(crypto.quote.USD.percent_change_24h)} %</td>
-                                <td style={{ color: Math.sign(crypto.quote.USD.percent_change_7d) === -1 ? "red" : "green" }} id="weekChange">{formatter.format(crypto.quote.USD.percent_change_7d)} %</td>
-                                <td style={{ width: '17%' }}>$  {formatter.format(crypto.quote.USD.market_cap)}</td>
-                                <td style={{ width: '17%' }}>$ {formatter.format(crypto.quote.USD.volume_24h)}</td>
+                                <td>{crypto.market_cap_rank}</td>
+                                <td><img src={crypto.image} alt={crypto.name} width="40px" /> {crypto.name} </td>
+                                <td style={{ width: '12%' }}>$ {formatter.format(crypto.current_price)}</td>
+                                <td style={{ color: Math.sign(crypto.price_change_percentage_24h) === -1 ? "red" : "green" }} id="dayChange">{formatter.format(crypto.price_change_percentage_24h)} %</td>
+                                <td style={{ width: '17%' }}>$  {formatter.format(crypto.market_cap)}</td>
+                                <td style={{ width: '17%' }}>$ {formatter.format(crypto.total_volume)}</td>
                             </tr>
                         </>)
                     })}
@@ -47,4 +45,4 @@ const CryptoTable = () => {
 
 }
 
-export default CryptoTable
+export default NewCryptoTable

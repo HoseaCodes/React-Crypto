@@ -1,5 +1,6 @@
 import React from "react";
-import CryptoTable from "../../components/cryptoData";
+// import CryptoTable from "../../components/cryptoData";
+import NewCryptoTable from "../../components/cryptoDataGecko";
 import NavBar from '../../components/navBar';
 
 const Home = () => {
@@ -7,7 +8,8 @@ const Home = () => {
         <React.Fragment>
             <NavBar />
             {/* <CryptoPrices /> */}
-            <CryptoTable />
+            {/* <CryptoTable /> */}
+            <NewCryptoTable />
         </React.Fragment>
     )
 }

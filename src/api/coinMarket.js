@@ -5,25 +5,11 @@ function CoinMarketAPI() {
     const [crypto, setCrypto] = useState([])
 
     const getCrypto = async () => {
-        const url = "https://api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
-        const params = {
-            qs: {
-                'start': '1',
-                'limit': '5000',
-                'convert': 'USD'
-            },
-            headers: {
-                'X-CMC_PRO_API_KEY': process.env.REACT_APP_COINMARKET_API,
-                'Access-Control-Allow-Origin': '*'
-            },
-            json: true,
-            gzip: true
-
-        }
+        const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
         try {
-            const res = await axios.get(url, params)
-            setCrypto(res.data.data)
-            console.log("list: " + res);
+            const res = await axios.get(url)
+            console.log(res.data)
+            setCrypto(res.data)
         } catch (error) {
             console.error(error);
         }

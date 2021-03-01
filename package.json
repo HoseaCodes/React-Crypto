@@ -48,7 +48,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://pro-api.coinmarketcap.com/",
+  "proxy": "http://localhost:5000",
   "author": "Dominique Hosea",
   "license": "ISC"
 }
