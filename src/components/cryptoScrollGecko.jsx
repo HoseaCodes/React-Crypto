@@ -17,7 +17,7 @@ const GetPrices = () => {
         cryptos.forEach(function (crypto) {
             const symbol = crypto.symbol.toUpperCase()
             tickers.push(symbol)
-            tickers.push("$" + formatter.format(crypto.current_price))
+            tickers.push(formatter.format(crypto.price_change_percentage_24h) + '%')
             tickers.push(" | ")
         });
         setTicker(tickers);
