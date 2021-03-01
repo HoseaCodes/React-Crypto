@@ -8,7 +8,7 @@ const GetPrices = () => {
     const cryptos = state.coinMarketAPI.crypto[0]
     const [allTicker, setTicker] = useState('')
     // var tickers = [];
-    var tickers = React.useMemo(() => new Array(), [])
+    var tickers = React.useMemo(() => [], [])
 
     const formatter = React.useMemo(() => new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }), [])
 
