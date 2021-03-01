@@ -15,7 +15,8 @@ const GetPrices = () => {
 
     const getTiickers = useCallback(() => {
         cryptos.forEach(function (crypto) {
-            tickers.push(crypto.symbol)
+            const symbol = crypto.symbol.toUpperCase()
+            tickers.push(symbol)
             tickers.push("$" + formatter.format(crypto.current_price))
             tickers.push(" | ")
         });
