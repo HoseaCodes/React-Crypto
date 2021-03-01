@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext, useEffect, useCallback } from 'react';
 import Ticker from 'react-ticker';
 import { GlobalState } from '../GlobalState';
 import './style.css';
@@ -8,26 +8,27 @@ const GetPrices = () => {
     const cryptos = state.coinMarketAPI.crypto[0]
     const [allTicker, setTicker] = useState('')
     var tickers = [];
-    const formatter = new Intl.NumberFormat('en-US', {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-    });
 
+    const formatter = React.useMemo(() => {
+        return new Intl.NumberFormat('en-US', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+        });
+    }, []);
 
-    useEffect(() => {
-        // const timer = setInterval(() => {
-        // while (tickers.length < 200) {
-
+    const getTiickers = useCallback(() => {
         cryptos.forEach(function (crypto) {
             tickers.push(crypto.symbol)
             tickers.push("$" + formatter.format(Math.round(crypto.quote.USD.price * 100) / 100))
             tickers.push(" | ")
         });
-        // }
         setTicker(tickers);
-        // }, 10000)
-        // return () => clearInterval(timer)
-    }, []);
+    }, [cryptos, formatter, tickers]);
+
+
+    useEffect(() => {
+        getTiickers()
+    }, [getTiickers]);
 
     return allTicker ? (
         <p style={{ whiteSpace: 'nowrap' }}>{allTicker.join(" ")}</p>
