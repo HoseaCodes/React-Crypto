@@ -14,8 +14,13 @@ function KeyAPI() {
             gzip: true
 
         }
-        const res = await axios.get(url, params)
-        setKey(res.data.data)
+        try {
+            const res = await axios.get(url, params)
+            setKey(res.data.data)
+            console.log(res);
+        } catch (error) {
+            console.error(error);
+        }
     }
     useEffect(() => {
         getKey()
