@@ -5,7 +5,7 @@ function CoinMarketAPI() {
     const [crypto, setCrypto] = useState([])
 
     const getCrypto = async () => {
-        const url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
+        const url = "https://api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
         const params = {
             qs: {
                 'start': '1',
@@ -23,7 +23,7 @@ function CoinMarketAPI() {
         try {
             const res = await axios.get(url, params)
             setCrypto(res.data.data)
-            console.log(res);
+            console.log("list: " + res);
         } catch (error) {
             console.error(error);
         }
