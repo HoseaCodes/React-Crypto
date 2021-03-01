@@ -5,7 +5,7 @@ function CoinMarketAPI() {
     const [crypto, setCrypto] = useState([])
 
     const getCrypto = async () => {
-        const url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
+        const url = "https://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
         const params = {
             qs: {
                 'start': '1',
@@ -14,6 +14,7 @@ function CoinMarketAPI() {
             },
             headers: {
                 'X-CMC_PRO_API_KEY': process.env.REACT_APP_COINMARKET_API,
+                'Access-Control-Allow-Origin': '*'
             },
             json: true,
             gzip: true

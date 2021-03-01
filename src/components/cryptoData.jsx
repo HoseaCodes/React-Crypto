@@ -28,7 +28,7 @@ const CryptoTable = () => {
                 <tbody>
                     {cryptos.map(crypto => {
                         return (<>
-                            <tr>
+                            <tr key={crypto.id}>
                                 <td>{crypto.cmc_rank}</td>
                                 <td>{crypto.symbol} {crypto.name} </td>
                                 <td style={{ width: '12%' }}>$ {formatter.format(Math.round(crypto.quote.USD.price * 100) / 100)}</td>
