@@ -1,7 +1,6 @@
 {
   "name": "cryptocobalt",
   "version": "0.1.0",
-  "homepage": ".",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
@@ -50,7 +49,6 @@
     ]
   },
   "proxy": "https://pro-api.coinmarketcap.com/",
-  "main": "server.js",
   "author": "Dominique Hosea",
   "license": "ISC"
 }
