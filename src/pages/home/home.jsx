@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <React.Fragment>
             <NavBar />
-            <CryptoPrices />
+            {/* <CryptoPrices /> */}
             <CryptoTable />
             <Link to='/'>Go Back Home</Link>
         </React.Fragment>
