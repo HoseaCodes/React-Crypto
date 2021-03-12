@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar } from 'react-bootstrap';
 import Logo from '../images/cryptologo.png'
+import TokenExchange from '../pages/exchange/tokenExchange';
 // import Keys from './keyCount';
 import './style.css';
 
@@ -14,6 +15,8 @@ export default function NavBar() {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className=" nav-content justify-content-end">
+                    <a href="/">Home</a>
+                    <a href="/tokenexchange">Exchange</a>
                     {/* <Keys /> */}
                 </Navbar.Collapse>
             </Navbar>

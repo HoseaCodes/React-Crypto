@@ -22,3 +22,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+truffle-config.js
+.babelrc
+
+test/EthSwap.test.js
+/migrations
+src/abis
