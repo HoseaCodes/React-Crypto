@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Container, Table } from 'react-bootstrap';
 import { GlobalState } from '../GlobalState';
 
+//Importing data from coingecko API
 const NewCryptoTable = () => {
     const state = useContext(GlobalState)
     const cryptos = state.coinMarketAPI.crypto[0]

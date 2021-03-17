@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 import { GlobalState } from '../GlobalState';
 import './style.css';
 
-
+//Tracks API use 
 const Keys = () => {
     const state = useContext(GlobalState)
     console.log(state)

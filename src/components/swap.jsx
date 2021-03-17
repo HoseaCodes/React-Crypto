@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import tokenLogo from '../images/token-logo.png'
 import ethLogo from '../images/eth-logo.png'
 
+//handles the process of buying/selling
 class Swap extends Component {
     constructor(props) {
         super(props)

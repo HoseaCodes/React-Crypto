@@ -3,6 +3,7 @@ import Ticker from 'react-ticker';
 import { GlobalState } from '../GlobalState';
 import './style.css';
 
+//Display coingecko API info in scrolling feature
 const GetPrices = () => {
     const state = useContext(GlobalState)
     const cryptos = state.coinMarketAPI.crypto[0]

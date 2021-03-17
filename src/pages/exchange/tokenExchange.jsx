@@ -9,12 +9,14 @@ import './tokenExchange.css';
 
 class TokenExchange extends Component {
 
+
     async componentWillMount() {
         await this.loadWeb3()
         await this.loadLockchainData()
         console.log(window.web3)
     }
 
+    // Generate info from contract
     async loadLockchainData() {
         const web3 = window.web3
         const accounts = await web3.eth.getAccounts()
@@ -44,6 +46,7 @@ class TokenExchange extends Component {
         this.setState({ loading: false })
     }
 
+    //Load existing Information
     async loadWeb3() {
         if (window.ethereum) {
             window.web3 = new Web3(window.ethereum)
@@ -76,6 +79,7 @@ class TokenExchange extends Component {
         }
     }
     render() {
+        //Show buy/sell exchange
         let content
         if (this.state.loading) {
             content = <p id="loader">Loading...</p>
@@ -93,7 +97,6 @@ class TokenExchange extends Component {
                         <main role="main" className="col-lg-12 d-flex text-center">
                             <div className="content mr-auto ml-auto">
                                 <a
-                                    href="http://www.dappuniversity.com/bootcamp"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
