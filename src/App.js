@@ -6,6 +6,7 @@ import Error from './pages/error/error';
 import { DataProvider } from './GlobalState';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import TokenExchange from './pages/exchange/tokenExchange';
+import Voting from './pages/voting/voting';
 
 class App extends Component {
   async componentWillMount() {
@@ -44,6 +45,14 @@ class App extends Component {
               render={() => (
                 <TokenExchange
                   loadBlockchainData={this.loadBlockchainData}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/voting"
+              render={() => (
+                <Voting
                 />
               )}
             />
