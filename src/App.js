@@ -7,6 +7,7 @@ import { DataProvider } from './GlobalState';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import TokenExchange from './pages/exchange/tokenExchange';
 import Voting from './pages/voting/voting';
+import NFT from './pages/nft/nft';
 
 class App extends Component {
   async componentWillMount() {
@@ -53,6 +54,14 @@ class App extends Component {
               path="/voting"
               render={() => (
                 <Voting
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/nft"
+              render={() => (
+                <NFT
                 />
               )}
             />
