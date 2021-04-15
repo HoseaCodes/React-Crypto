@@ -1,10 +1,10 @@
 pragma solidity ^0.5.0;
 
-import "./Token.sol";
+import "./PattonUToken.sol";
 
 contract EthSwap {
     string public name = "EthSwap Instant Exchange";
-    Token public token;
+    PattonUToken public token;
     uint256 public rate = 100;
 
     event TokensPurchased(
@@ -20,7 +20,7 @@ contract EthSwap {
         uint256 rate
     );
 
-    constructor(Token _token) public {
+    constructor(PattonUToken _token) public {
         token = _token;
     }
 

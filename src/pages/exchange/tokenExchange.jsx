@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Web3 from 'web3'
 import EthSwap from '../../abis/EthSwap.json'
 import Token from '../../abis/Token.json'
+import PattonU from '../../abis/PattonUToken.json'
 import NavBar from '../../components/navBar';
 import Swap from '../../components/swap';
 import logo from '../../images/cryptologo.png';
@@ -21,16 +22,18 @@ class TokenExchange extends Component {
         const web3 = window.web3
         const accounts = await web3.eth.getAccounts()
         this.setState({ account: accounts[0] })
-
+        console.log(this.state.acccount)
         const ethBalance = await web3.eth.getBalance(this.state.account)
         this.setState({ ethBalance: ethBalance })
+        console.log(this.state.ethBalance)
 
         const networkId = await web3.eth.net.getId()
-        const tokenData = Token.networks[networkId]
+        const tokenData = PattonU.networks[networkId]
         if (tokenData) {
-            const token = new web3.eth.Contract(Token.abi, tokenData.address)
+            const token = new web3.eth.Contract(PattonU.abi, tokenData.address)
             this.setState({ token: token })
             let tokenBalance = await token.methods.balanceOf(this.state.account).call()
+            console.log(token)
             this.setState({ tokenBalance: tokenBalance.toString() })
         } else {
             window.alert('Token contract not deployed to detected network')
@@ -38,6 +41,7 @@ class TokenExchange extends Component {
         const ethSwapData = EthSwap.networks[networkId]
         if (ethSwapData) {
             const ethSwap = new web3.eth.Contract(EthSwap.abi, ethSwapData.address)
+            // let test = await ethSwap.methods.buyTokens().send({ value: 1, from: this.state.account })
             this.setState({ ethSwap: ethSwap })
         } else {
             window.alert('EthSwap contract not deployed to detected network')
@@ -66,6 +70,19 @@ class TokenExchange extends Component {
             this.setState({ loading: false })
         })
     }
+    sellTokens = (tokenAmount) => {
+        this.setState({ loading: true })
+        this.state.token.methods.approve(this.state.ethSwap.address, tokenAmount).send({ from: this.state.account }).on('transactionHash', (hash) => {
+            this.state.ethSwap.methods.sellTokens(tokenAmount).send({ from: this.state.account }).on('transactionHash', (hash) => {
+                this.setState({ loading: false })
+            })
+        })
+    }
+
+    handleMethod = (e) => {
+        this.setState({ method: e })
+        console.log(this.state.method)
+    }
 
     constructor(props) {
         super(props)
@@ -75,6 +92,7 @@ class TokenExchange extends Component {
             token: {},
             ethSwap: {},
             tokenBalance: 0,
+            method: 'buy',
             loading: true
         }
     }
@@ -87,7 +105,9 @@ class TokenExchange extends Component {
             content = <Swap
                 ethBalance={this.state.ethBalance}
                 tokenBalance={this.state.tokenBalance}
-                buyTokens={this.buyTokens} />
+                buyTokens={this.buyTokens}
+                sellTokens={this.sellTokens}
+                method={this.state.method} />
         }
         return (
             <div>
@@ -102,7 +122,13 @@ class TokenExchange extends Component {
                                 >
                                     <img src={logo} className="App-logo" alt="logo" />
                                 </a>
-                                <h1>Token Exchange</h1>
+                                <h1 className="mb-5">Token Exchange</h1>
+                                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <button onClick={(e) => this.handleMethod('buy')} className="btn btn-outline-secondary btn-lg">Buy</button>
+                                    <h2>Or</h2>
+                                    <button onClick={(e) => this.handleMethod('sell')} className="btn btn-outline-secondary btn-lg">Sell</button>
+
+                                </div>
                                 {content}
                             </div>
                         </main>
