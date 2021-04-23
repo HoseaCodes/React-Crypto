@@ -37,6 +37,7 @@ class App extends Component {
               path="/"
               render={() => (
                 <Home
+                  loadBlockchainData={this.loadBlockchainData}
                 />
               )}
             />

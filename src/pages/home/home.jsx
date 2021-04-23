@@ -2,16 +2,16 @@ import React from "react";
 // import CryptoTable from "../../components/cryptoData";
 import GeckoCryptoPrices from "../../components/cryptoScrollGecko";
 import NewCryptoTable from "../../components/cryptoDataGecko";
-import NavBar from '../../components/navBar';
 import Footer from "../../components/footer";
+import Header from "../../components/header";
 
-const Home = () => {
+const Home = (props) => {
     return (
         <React.Fragment>
-            <NavBar />
+            <Header props={props} />
             {/* <CryptoPrices /> */}
             {/* <CryptoTable /> */}
-            <GeckoCryptoPrices />
+            {/* <GeckoCryptoPrices /> */}
             <NewCryptoTable />
             <Footer />
         </React.Fragment>
