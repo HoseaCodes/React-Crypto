@@ -3,6 +3,7 @@ import React from "react";
 import GeckoCryptoPrices from "../../components/cryptoScrollGecko";
 import NewCryptoTable from "../../components/cryptoDataGecko";
 import NavBar from '../../components/navBar';
+import Footer from "../../components/footer";
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             {/* <CryptoTable /> */}
             <GeckoCryptoPrices />
             <NewCryptoTable />
+            <Footer />
         </React.Fragment>
     )
 }

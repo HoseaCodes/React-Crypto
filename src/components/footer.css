@@ -1,0 +1,147 @@
+.footer {
+    background-color: #213973;
+    text-align: center;
+    padding-top: 90px;
+    margin-top: 90px;
+}
+
+.logo2 {
+    float: left;
+    padding-bottom: 15px;
+}
+
+.footer h3 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: left;
+    margin-bottom: 19px;
+    margin-top: 9px;
+    text-transform: uppercase;
+}
+
+ul.location_icon li {
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    text-align: left;
+    padding-bottom: 26px;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+ul.location_icon li a {
+    font-size: 30px;
+    color: #fff;
+    line-height: 30px;
+    padding-right: 16px;
+    float: left;
+}
+
+ul.location_icon li a:hover {
+    color: #85B0EC;
+}
+
+.follow {
+    text-align: left;
+}
+
+.follow p {
+    color: #fff;
+    font-size: 17px;
+    display: inline-block;
+}
+
+ul.social_icon {
+    padding-top: 20px;
+    padding-left: 0%;
+}
+
+ul.social_icon li {
+    float: left;
+    height: 60px;
+    padding-right: 7px;
+    list-style: none;
+}
+
+ul.social_icon li:last-child {
+    padding-right: 0px;
+}
+
+ul.social_icon li a {
+    color: #213973;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 100%;
+    font-size: 22px;
+}
+
+ul.social_icon li a:hover {
+    background: #85B0EC;
+    color: #000;
+}
+
+ul.link_icon li {
+    display: flex;
+    margin-bottom: 17px;
+    flex-wrap: wrap;
+}
+
+ul.link_icon li a i {
+    padding-right: 10px;
+}
+
+ul.link_icon li a { 
+    color: #fff;
+    float: left;
+    text-align: center;
+    line-height: 20px;
+    font-size: 17px;
+}
+
+ul.link_icon li.active a {
+    color: #85B0EC;
+}
+
+ul.link_icon li a:hover {
+    color: #85B0EC;
+}
+
+ul.img_icon {
+    float: left;
+}
+
+ul.img_icon li {
+    display: block;
+    padding-bottom: 10px;
+    float: left;
+    padding-right: 10px;
+}
+
+.copyright {
+    margin-top: 70px;
+    padding: 0px 0px 20px 0px;
+}
+
+.copyright p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    padding-top: 25px;
+    border-top: #213973 solid 1px;
+}
+
+.copyright a {
+    color: #fff;
+}
+
+.copyright a:hover {
+    color: #85B0EC;
+}
