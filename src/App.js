@@ -11,7 +11,7 @@ import NFT from './pages/nft/nft';
 
 class App extends Component {
   async componentWillMount() {
-    await this.loadBlockchainData();
+    // await this.loadBlockchainData();
   }
 
   async loadBlockchainData(dispatch) {
