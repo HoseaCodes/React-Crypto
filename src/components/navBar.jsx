@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, NavItem } from 'react-bootstrap';
 import Logo from '../images/cryptologo.png'
 import Identicon from 'identicon.js';
-import TokenExchange from '../pages/exchange/tokenExchange';
+// import TokenExchange from '../pages/exchange/tokenExchange';
 // import Keys from './keyCount';
 import './style.css';
 

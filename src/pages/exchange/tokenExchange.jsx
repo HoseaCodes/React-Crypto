@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Web3 from 'web3'
 import EthSwap from '../../abis/EthSwap.json'
-import Token from '../../abis/Token.json'
+// import Token from '../../abis/Token.json'
 import PattonU from '../../abis/PattonUToken.json'
 import NavBar from '../../components/navBar';
 import Swap from '../../components/swap';
@@ -119,6 +119,7 @@ class TokenExchange extends Component {
                                 <a
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    href="/"
                                 >
                                     <img src={logo} className="App-logo" alt="logo" />
                                 </a>

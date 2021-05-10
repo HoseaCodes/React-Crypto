@@ -16,7 +16,7 @@ class App extends Component {
 
   async loadBlockchainData(dispatch) {
     if (typeof window.ethereum !== "undefined") {
-      const web3 = new Web3(window.ethereum);
+      // const web3 = new Web3(window.ethereum);
       await window.ethereum.enable();
     }
     else if (window.web3) {

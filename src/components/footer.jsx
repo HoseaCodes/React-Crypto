@@ -18,12 +18,12 @@ const Footer = () => {
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <h3>Quick link</h3>
                             <ul class="link_icon">
-                                <li class="active"> <a href="#"> <i class="fa fa-chevron-right"
-                                    aria-hidden="index.html"></i>Home</a></li>
-                                <li> <a href="#"> <i class="fa fa-chevron-right" aria-hidden="blog"></i>Hbout </a></li>
-                                <li> <a href="#"> <i class="fa fa-chevron-right" aria-hidden="contact"></i>Currency</a></li>
-                                <li> <a href="#"> <i class="fa fa-chevron-right" aria-hidden="blog"></i>Exchange</a></li>
-                                <li> <a href="#"> <i class="fa fa-chevron-right" aria-hidden="contact"></i>Subscribe</a></li>
+                                <li class="active"> <a href="/"> <i class="fa fa-chevron-right"
+                                    aria-hidden="false"></i>Home</a></li>
+                                <li> <a href="/"> <i class="fa fa-chevron-right" aria-hidden="false"></i>Hbout </a></li>
+                                <li> <a href="/"> <i class="fa fa-chevron-right" aria-hidden="false"></i>Currency</a></li>
+                                <li> <a href="/"> <i class="fa fa-chevron-right" aria-hidden="false"></i>Exchange</a></li>
+                                <li> <a href="/"> <i class="fa fa-chevron-right" aria-hidden="false"></i>Subscribe</a></li>
                             </ul>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6">
@@ -31,21 +31,21 @@ const Footer = () => {
                             <div class="follow">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </p>
                                 <ul class="social_icon">
-                                    <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                    <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li> <a href="/"><i class="fa fa-facebook-f"></i></a></li>
+                                    <li> <a href="/"><i class="fa fa-twitter"></i></a></li>
+                                    <li> <a href="/"> <i class="fa fa-linkedin"></i></a></li>
+                                    <li> <a href="/"><i class="fa fa-instagram" ></i></a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <h3>Contact us</h3>
                             <ul class="location_icon">
-                                <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>Reader will be dis<br />
+                                <li><a href="/"><i class="fa fa-map-marker"></i></a>Reader will be dis<br />
                                     tracted by the reada
                        </li>
-                                <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>demo@gmail.com</li>
-                                <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+01 102586954775
+                                <li><a href="/"><i class="fa fa-envelope"></i></a>demo@gmail.com</li>
+                                <li><a href="/"><i class="fa fa-volume-control-phone"></i></a>+01 102586954775
                        </li>
                             </ul>
                         </div>

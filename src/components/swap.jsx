@@ -24,10 +24,10 @@ class Swap extends Component {
                             <form className="mb-3" onSubmit={(event) => {
                                 event.preventDefault()
                                 let etherAmount
-                                let sellAmount
+                                // let sellAmount
                                 etherAmount = this.input.value.toString()
                                 etherAmount = window.web3.utils.toWei(etherAmount, 'Ether')
-                                sellAmount = window.web3.utils.toWei(this.state.input, 'Ether')
+                                // sellAmount = window.web3.utils.toWei(this.state.input, 'Ether')
                                 if (this.props.method === 'buy') return this.props.buyTokens(etherAmount)
                                 else if (this.props.method === 'sell') return this.props.sellTokens('100')
                             }}>

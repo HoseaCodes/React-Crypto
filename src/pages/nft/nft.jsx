@@ -28,9 +28,9 @@ class NFT extends Component {
         // Load account
         const accounts = await web3.eth.getAccounts()
         this.setState({ account: accounts[0] })
-
         const networkId = await web3.eth.net.getId()
         const networkData = Color.networks[networkId]
+        console.log(networkData)
         if (networkData) {
             const abi = Color.abi
             const address = networkData.address

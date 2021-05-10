@@ -1,6 +1,6 @@
 import React from "react";
 // import CryptoTable from "../../components/cryptoData";
-import GeckoCryptoPrices from "../../components/cryptoScrollGecko";
+// import GeckoCryptoPrices from "../../components/cryptoScrollGecko";
 import NewCryptoTable from "../../components/cryptoDataGecko";
 import Footer from "../../components/footer";
 import Header from "../../components/header";

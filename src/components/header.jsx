@@ -34,19 +34,19 @@ const Header = (props) => {
                                                 <a class="nav-link" href="/"> Home </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="#">About</a>
+                                                <a class="nav-link" href="/">About</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="/tokenexchange">Exchange</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="#">News</a>
+                                                <a class="nav-link" href="/">News</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="#">Contact Us</a>
+                                                <a class="nav-link" href="/">Contact Us</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="#"> {props.account}</a>
+                                                <a class="nav-link" href="/"> {props.account}</a>
                                             </li>
                                             {
                                                 props.accounnt
@@ -60,10 +60,10 @@ const Header = (props) => {
                                                     : <span></span>
                                             }
                                             <li class="nav-item d_none le_co">
-                                                <a class="nav-link" href="#"><i class="fa fa-user" aria-hidden="true"></i> Login</a>
+                                                <a class="nav-link" href="/"><i class="fa fa-user" aria-hidden="true"></i> Login</a>
                                             </li>
                                             <li class="nav-item d_none le_co">
-                                                <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                                <a class="nav-link" href="/"><i class="fa fa-search" ></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -85,12 +85,12 @@ const Header = (props) => {
                                                         <h1>c u r r e n c y</h1>
                                                         <p>It is a long established fact that a reader will be distracted by the readable
                                                         It is a long established fact that a reader will be distracted by the readable </p>
-                                                        <a class="read_more" href="#"><img src={BTNH} alt="#" /> Discover Now</a>
+                                                        <a class="read_more" href="/"><img src={BTNH} alt="/" /> Discover Now</a>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12 col-lg-5">
                                                     <div class="text_img">
-                                                        <figure><img src={BAN} alt="#" /></figure>
+                                                        <figure><img src={BAN} alt="/" /></figure>
                                                     </div>
                                                 </div>
                                             </div>
