@@ -40,6 +40,12 @@ const Header = (props) => {
                                                 <a class="nav-link" href="/tokenexchange">Exchange</a>
                                             </li>
                                             <li class="nav-item">
+                                                <a class="nav-link" href="/voting">Voting</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/nft">NFT</a>
+                                            </li>
+                                            <li class="nav-item">
                                                 <a class="nav-link" href="/">News</a>
                                             </li>
                                             <li class="nav-item">

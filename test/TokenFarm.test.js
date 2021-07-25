@@ -61,4 +61,48 @@ contract('TokenFarm', ([owner, investor]) => {
             assert.equal(balance.toString(), tokens('1000000'))
         })
     })
+
+    // Staking Function
+    describe('Farming ', async () => {
+        it('has a name', async () => {
+          const name = await tokenFarm.name()
+          assert.equal(name, 'PattonU Token Farm')
+        })
+        
+        // Confirm passive tokens have transfered to token farm
+        it('rewards investors for staking mDai tokens', async () => {
+            let result
+            // Check investor balance before staking
+            result = await daiToken.balanceOf(investor)
+            assert.equal(result.toString(), tokens('100'), 'investor Mock DAI wallet balance correct before staking')
+
+            // Stake Mock DAI Tokens
+            await daiToken.approve(tokenFarm.address, tokens('100'), {from: investor})
+            // await tokenFarm.stakeTokens(tokens('100'), {from: investor})
+
+            // Check staking balance after transfer
+            // result = await daiToken.balanceOf(investor)
+            // assert.equal(result.toString(), tokens('0'), 'investor Mock DAI wallet balance correct before staking')
+
+            // result = await daiToken.balanceOf(tokenFarm.address)
+            // assert.equal(result.toString(), tokens('100'), 'Token farm Mock DAI balance correct after staking')
+
+            // result = await tokenFarm.stakingBalance(investor)
+            // assert.equal(result.toString(), tokens('100'), 'investor staking balance correct after staking')
+
+            // result = await tokenFarm.isStaking(investor)
+            // assert.equal(result.toString(), 'true', 'investor staking status correct after staking')
+
+            //Issue tokens
+            // await tokenFarm.issueTokens({from: owner})
+
+            // // Check balances after issued
+            // result = await passiveToken.balanceOf(investor)
+            // assert.equal(result.toString(), tokens('100'), 'investor passive token wallet balance correct after issued')
+
+            // // Ensure that only owner can issue tokens
+            // await tokenFarm.issueTokens({from: investor}).should.be.rejected;
+
+        })
+    })
 })
